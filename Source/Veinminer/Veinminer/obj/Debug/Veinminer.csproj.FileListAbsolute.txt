@@ -1,0 +1,10 @@
+C:\Games\RimWorld Dev Environment\RimWorld\Mods\Veinminer\Assemblies\Veinminer.dll
+C:\Games\RimWorld Dev Environment\RimWorld\Mods\Veinminer\Source\Veinminer\Veinminer\obj\Debug\Veinminer.csprojResolveAssemblyReference.cache
+C:\Games\RimWorld Dev Environment\RimWorld\Mods\Veinminer\Source\Veinminer\Veinminer\obj\Debug\Veinminer.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Veinminer\Assemblies\Veinminer.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Veinminer\Source\Veinminer\Veinminer\obj\Debug\Veinminer.csprojResolveAssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Veinminer\Source\Veinminer\Veinminer\obj\Debug\Veinminer.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Veinminer-b19\Assemblies\Veinminer.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Veinminer-b19\Source\Veinminer\Veinminer\obj\Debug\Veinminer.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Veinminer-b19\Source\Veinminer\Veinminer\obj\Debug\Veinminer.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Veinminer-b19\Source\Veinminer\Veinminer\obj\Debug\Veinminer.dll
