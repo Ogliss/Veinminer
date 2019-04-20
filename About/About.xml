@@ -2,7 +2,9 @@
 <ModMetaData>
 	<name>Veinminer R1.0</name>
 	<author>Toasteh, Updated by Ogliss</author>
-	<targetVersion>1.0.2059</targetVersion>
+	<supportedVersions>
+        <li>1.0</li>
+	</supportedVersions>
 	<description>V1.2
 	update to R1.0 
 	original mod:https://steamcommunity.com/sharedfiles/filedetails/?id=944099898
