@@ -8,3 +8,7 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Veinminer-b19\Assemb
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Veinminer-b19\Source\Veinminer\Veinminer\obj\Debug\Veinminer.csprojResolveAssemblyReference.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Veinminer-b19\Source\Veinminer\Veinminer\obj\Debug\Veinminer.csproj.CoreCompileInputs.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Veinminer-b19\Source\Veinminer\Veinminer\obj\Debug\Veinminer.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Veinminer-R1.0\Source\Veinminer\Veinminer\obj\Debug\Veinminer.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Veinminer-R1.0\Source\Veinminer\Veinminer\obj\Debug\Veinminer.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Veinminer-R1.0\Source\Veinminer\Veinminer\obj\Debug\Veinminer.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Veinminer-R1.0\1.1\Assemblies\Veinminer.dll

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Veinminer R1.0</name>
+	<name>Veinminer R1.1</name>
 	<author>Toasteh, Updated by Ogliss</author>
 	<supportedVersions>
         <li>1.0</li>
+        <li>1.1</li>
 	</supportedVersions>
+	<packageId>Ogliss.Toastehs.Veinminer</packageId>
 	<description>V1.2
 	update to R1.0 
 	original mod:https://steamcommunity.com/sharedfiles/filedetails/?id=944099898

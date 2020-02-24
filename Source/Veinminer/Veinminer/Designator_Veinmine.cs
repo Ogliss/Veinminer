@@ -35,7 +35,7 @@ namespace Veinminer
 			if(!c.InBounds(base.Map)) {
 				return false;
 			}
-			if(base.Map.designationManager.DesignationAt(c, DesignationDefOf.Mine) != null) {
+			if(base.Map.designationManager.DesignationAt(c, DesignationDefOf.Mine) != null ) {
 				return AcceptanceReport.WasRejected;
 			}
 			if(c.Fogged(base.Map)) {
