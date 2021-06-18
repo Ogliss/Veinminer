@@ -33,6 +33,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="Designator_ZoneAdd_CustomSoilOnly.cs.bak" />
     <Compile Include="Designator_Veinmine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -8,21 +8,34 @@ using UnityEngine;
 
 namespace Veinminer
 {
-    public class Designator_Veinmine: Designator {
+    public class Designator_Veinmine: Designator_Mine
+	{
 		int numDesignated = 0;
-		public override int DraggableDimensions {
-			get {
+		public override int DraggableDimensions 
+		{
+			get 
+			{
 				return 0;
 			}
 		}
 
-		public override bool DragDrawMeasurements {
-			get {
+		public override bool DragDrawMeasurements 
+		{
+			get 
+			{
 				return true;
 			}
 		}
 
-		public Designator_Veinmine() {
+		protected override DesignationDef Designation
+		{
+			get
+			{
+				return DesignationDefOf.Mine;
+			}
+		}
+		public Designator_Veinmine() 
+		{
 			this.defaultLabel = "DesignatorVeinmine".Translate();
 			this.icon = ContentFinder<Texture2D>.Get("Designators/Veinmine", true);
 			this.defaultDesc = "DesignatorVeinmineDesc".Translate();
@@ -31,44 +44,55 @@ namespace Veinminer
 			this.tutorTag = "Mine";
 		}
 
-		public override AcceptanceReport CanDesignateCell(IntVec3 c) {
-			if(!c.InBounds(base.Map)) {
+		public override AcceptanceReport CanDesignateCell(IntVec3 c) 
+		{
+			if(!c.InBounds(base.Map)) 
+			{
 				return false;
 			}
-			if(base.Map.designationManager.DesignationAt(c, DesignationDefOf.Mine) != null ) {
+			if(base.Map.designationManager.DesignationAt(c, DesignationDefOf.Mine) != null ) 
+			{
 				return AcceptanceReport.WasRejected;
 			}
-			if(c.Fogged(base.Map)) {
+			if(c.Fogged(base.Map)) 
+			{
 				return false;
 			}
 			Thing thing = c.GetFirstMineable(base.Map);
-			if(thing == null) {
+			if(thing == null) 
+			{
 				return "MessageMustDesignateMineable".Translate();
 			}
 			AcceptanceReport result = this.CanDesignateThing(thing);
-			if(!result.Accepted) {
+			if(!result.Accepted) 
+			{
 				return result;
 			}
 			return AcceptanceReport.WasAccepted;
 		}
 
-		public override AcceptanceReport CanDesignateThing(Thing t) {
-			if(!t.def.mineable) {
+		public override AcceptanceReport CanDesignateThing(Thing t)
+		{
+			if(!t.def.mineable) 
+			{
 				return false;
 			}
-			if(base.Map.designationManager.DesignationAt(t.Position, DesignationDefOf.Mine) != null) {
+			if(base.Map.designationManager.DesignationAt(t.Position, DesignationDefOf.Mine) != null) 
+			{
 				return AcceptanceReport.WasRejected;
 			}
 			return true;
 		}
 
-		public override void DesignateSingleCell(IntVec3 loc) {
+		public override void DesignateSingleCell(IntVec3 loc) 
+		{
 			base.Map.designationManager.AddDesignation(new Designation(loc, DesignationDefOf.Mine));
 			numDesignated = 0;
 			CheckNearby(loc);
 		}
 
-		void CheckNearby(IntVec3 loc) {
+		void CheckNearby(IntVec3 loc) 
+		{
 			
 			Thing locThing = loc.GetFirstMineable(base.Map);
 			IntVec3[] nearbyLocs = new IntVec3[8];
@@ -81,26 +105,35 @@ namespace Veinminer
 			nearbyLocs[6] = loc + new IntVec3(-1, 0, 1);
 			nearbyLocs[7] = loc + new IntVec3(-1, 0, -1);
 
-			for(int i = 0; i < nearbyLocs.Length; i++) {
-				if(numDesignated < 76) {
-					if(nearbyLocs[i].InBounds(base.Map)) {
+			for(int i = 0; i < nearbyLocs.Length; i++) 
+			{
+				if(numDesignated < 66) 
+				{
+					if(nearbyLocs[i].InBounds(base.Map)) 
+					{
 						bool canDesignate = true;
-						if(base.Map.designationManager.DesignationAt(nearbyLocs[i], DesignationDefOf.Mine) != null) {
+						if(base.Map.designationManager.DesignationAt(nearbyLocs[i], DesignationDefOf.Mine) != null) 
+						{
 							canDesignate = false;
 						}
 						Thing nearbyLocThing = nearbyLocs[i].GetFirstMineable(base.Map);
-						if(nearbyLocThing == null) {
+						if(nearbyLocThing == null) 
+						{
 							canDesignate = false;
-						} else if(locThing.DescriptionFlavor != nearbyLocThing.DescriptionFlavor) {
+						} else if(locThing.DescriptionFlavor != nearbyLocThing.DescriptionFlavor) 
+						{
 							canDesignate = false;
 						}
-						if(nearbyLocThing != null) {
+						if(nearbyLocThing != null) 
+						{
 							AcceptanceReport result = this.CanDesignateThing(nearbyLocThing);
-							if(!result.Accepted) {
+							if(!result.Accepted) 
+							{
 								canDesignate = false;
 							}
 						}
-						if(canDesignate) {
+						if(canDesignate) 
+						{
 							this.DesignateSingleCell(nearbyLocs[i]);
 							numDesignated++;
 						}
@@ -109,16 +142,19 @@ namespace Veinminer
 			}
 		}
 
-		public override void DesignateThing(Thing t) {
+		public override void DesignateThing(Thing t) 
+		{
 			this.DesignateSingleCell(t.Position);
 		}
 
-		protected override void FinalizeDesignationSucceeded() {
+		protected override void FinalizeDesignationSucceeded() 
+		{
 			base.FinalizeDesignationSucceeded();
 			PlayerKnowledgeDatabase.KnowledgeDemonstrated(ConceptDefOf.Mining, KnowledgeAmount.SpecificInteraction);
 		}
 
-		public override void SelectedUpdate() {
+		public override void SelectedUpdate() 
+		{
 			GenUI.RenderMouseoverBracket();
 		}
 
