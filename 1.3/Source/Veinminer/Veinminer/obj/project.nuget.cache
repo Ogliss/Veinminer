@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DR5dLurM8zrS8FqsPBpKRLu8MPgBE9QrAOPF0DVHjPM0Jtk76b2ZDEEpoyoQSNbWG/bpVLySwp8nh2mYWXA4Vw==",
+  "dgSpecHash": "xiPQaXgBTuvkT9FeNEF1b/OMqNSjMZjnIY9qYIBYEFcH8c1izX9I0BnAAFffYEiw7f7UaMJw4YAglUOUv6EgiQ==",
   "success": true,
-  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Veinminer-R1.0\\1.3\\Source\\Veinminer\\Veinminer\\Veinminer.csproj",
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Veinminer\\1.3\\Source\\Veinminer\\Veinminer\\Veinminer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\krafs.rimworld.ref\\1.3.0\\krafs.rimworld.ref.1.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\lib.harmony\\2.0.4\\lib.harmony.2.0.4.nupkg.sha512",
