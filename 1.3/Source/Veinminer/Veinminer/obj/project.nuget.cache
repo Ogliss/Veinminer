@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xiPQaXgBTuvkT9FeNEF1b/OMqNSjMZjnIY9qYIBYEFcH8c1izX9I0BnAAFffYEiw7f7UaMJw4YAglUOUv6EgiQ==",
+  "dgSpecHash": "Qew4qG/9SJuaWr/vdCsaoZ6jDWbFX5qia4EDXbFxSrqmYPsXwwYzAgMf3Tmw65IO9qd54kc03DuLtTWPmJHuUg==",
   "success": true,
   "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Veinminer\\1.3\\Source\\Veinminer\\Veinminer\\Veinminer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\krafs.rimworld.ref\\1.3.0\\krafs.rimworld.ref.1.3.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3066\\krafs.rimworld.ref.1.3.3066.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\lib.harmony\\2.0.4\\lib.harmony.2.0.4.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.build.framework\\15.1.548\\microsoft.build.framework.15.1.548.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.build.utilities.core\\15.1.548\\microsoft.build.utilities.core.15.1.548.nupkg.sha512",
@@ -18,5 +18,16 @@
     "C:\\Users\\User\\.nuget\\packages\\taskpubliciser\\1.0.3\\taskpubliciser.1.0.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\unlimitedhugs.rimworld.hugslib\\8.0.0\\unlimitedhugs.rimworld.hugslib.8.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Veinminer depends on Krafs.Rimworld.Ref (>= 1.3.0) but Krafs.Rimworld.Ref 1.3.0 was not found. An approximate best match of Krafs.Rimworld.Ref 1.3.3066 was resolved.",
+      "libraryId": "Krafs.Rimworld.Ref",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.7.2"
+      ]
+    }
+  ]
 }

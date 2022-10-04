@@ -8,6 +8,16 @@ using UnityEngine;
 
 namespace Veinminer
 {
+	[StaticConstructorOnStartup]
+	public static class VeinMinter
+	{
+		static VeinMinter()
+		{
+			Mine = DefDatabase<DesignationDef>.GetNamedSilentFail("drm_SmartMine") ?? DesignationDefOf.Mine;
+        }
+		public static DesignationDef Mine;
+    }
+
     public class Designator_Veinmine: Designator_Mine
 	{
 		int numDesignated = 0;
@@ -31,7 +41,7 @@ namespace Veinminer
 		{
 			get
 			{
-				return DesignationDefOf.Mine;
+				return VeinMinter.Mine;
 			}
 		}
 		public Designator_Veinmine() 
@@ -50,7 +60,7 @@ namespace Veinminer
 			{
 				return false;
 			}
-			if(base.Map.designationManager.DesignationAt(c, DesignationDefOf.Mine) != null ) 
+			if(base.Map.designationManager.DesignationAt(c, Designation) != null ) 
 			{
 				return AcceptanceReport.WasRejected;
 			}
@@ -77,7 +87,7 @@ namespace Veinminer
 			{
 				return false;
 			}
-			if(base.Map.designationManager.DesignationAt(t.Position, DesignationDefOf.Mine) != null) 
+			if(base.Map.designationManager.DesignationAt(t.Position, Designation) != null) 
 			{
 				return AcceptanceReport.WasRejected;
 			}
@@ -86,7 +96,7 @@ namespace Veinminer
 
 		public override void DesignateSingleCell(IntVec3 loc) 
 		{
-			base.Map.designationManager.AddDesignation(new Designation(loc, DesignationDefOf.Mine));
+			base.Map.designationManager.AddDesignation(new Designation(loc, Designation));
 			numDesignated = 0;
 			CheckNearby_newTemp(loc);
 		}
@@ -102,7 +112,7 @@ namespace Veinminer
 			CheckCellsAdjacent(loc, locThing.def, ref cells);
 			for (int i = 0; i < cells.Count; i++)
 			{
-				base.Map.designationManager.AddDesignation(new Designation(cells[i], DesignationDefOf.Mine));
+				base.Map.designationManager.AddDesignation(new Designation(cells[i], Designation));
 				numDesignated++;
 				CheckCellsAdjacent(cells[i], locThing.def, ref cells);
 			}
@@ -114,7 +124,7 @@ namespace Veinminer
 		{
 			foreach (IntVec3 loc2 in GenAdjFast.AdjacentCells8Way(loc))
 			{
-				if (loc == loc2 || cells.Contains(loc2) || base.Map.designationManager.DesignationAt(loc2, DesignationDefOf.Mine) != null)
+				if (loc == loc2 || cells.Contains(loc2) || base.Map.designationManager.DesignationAt(loc2, Designation) != null)
 				{
 					continue;
 				}
@@ -154,7 +164,7 @@ namespace Veinminer
 					if(nearbyLocs[i].InBounds(base.Map)) 
 					{
 						bool canDesignate = true;
-						if(base.Map.designationManager.DesignationAt(nearbyLocs[i], DesignationDefOf.Mine) != null) 
+						if(base.Map.designationManager.DesignationAt(nearbyLocs[i], Designation) != null) 
 						{
 							canDesignate = false;
 						}
